@@ -1,10 +1,13 @@
-# DomainSuffix.Net
-Domain suffix library for Domain or Subdomain extract. 域名后缀库，用于识别合法域名或抽取子域名的合法主域名。
+using DomainSuffix.Net;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
-#### example
-
-```C#
- [TestMethod]
+namespace DomainSuffix.Tests
+{
+    [TestClass]
+    public class UnitTest1
+    {
+        [TestMethod]
         public void TestMethod1()
         {
             var url = "1.com";
@@ -38,7 +41,7 @@ Domain suffix library for Domain or Subdomain extract. 域名后缀库，用于�
         [TestMethod]
         public void TestMethod4()
         {
-            // update source online
+            
             var isOk = DomainValidator.UpdateOnlineSourceAsync().Result;
             
             Assert.AreEqual(isOk, true);
@@ -53,4 +56,5 @@ Domain suffix library for Domain or Subdomain extract. 域名后缀库，用于�
             Assert.AreEqual(subPart, "dns");
             Assert.AreEqual(suffix, "com.cn");
         }
-```
+    }
+}

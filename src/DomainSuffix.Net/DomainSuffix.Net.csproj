@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>domain validator, extract main domain from subdomain.
+域名合法性校验及主域名抽取库。</Description>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/BenDerPan/DomainSuffix.Net</PackageProjectUrl>
+    <Copyright>MIT</Copyright>
+    <RepositoryUrl>https://github.com/BenDerPan/DomainSuffix.Net</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>domain subdomain extract validate 域名 子域名 抽取 校验</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="public_suffix_list.dat" />
+    <None Include="logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="public_suffix_list.dat" />
+  </ItemGroup>
+
+</Project>
